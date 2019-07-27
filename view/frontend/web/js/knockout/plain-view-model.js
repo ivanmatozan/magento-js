@@ -26,6 +26,14 @@ define([
                 {
                     currencyTo: 'USD',
                     rate: 1.0
+                },
+                {
+                    currencyTo: 'EUR',
+                    rate: 0.68
+                },
+                {
+                    currencyTo: 'NZD',
+                    rate: 1.43
                 }
             ]),
             values: ko.observableArray([1, 3, 5, 7, 9])

@@ -7,11 +7,17 @@
 
     <pre data-bind="text: output"></pre>
 
-    <table data-bind="foreach: exchangeRates">
+    <table>
+        <tr>
+            <th data-bind="i18n: 'Currency to'"></th>
+            <th data-bind="i18n: 'Rate'"></th>
+        </tr>
+        <!-- ko foreach: exchangeRates -->
         <tr>
             <td data-bind="text: currencyTo"></td>
             <td data-bind="text: rate"></td>
         </tr>
+        <!-- /ko -->
     </table>
 
     <ul data-bind="foreach: values">
