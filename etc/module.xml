@@ -5,6 +5,8 @@
     <module name="Matozan_MagentoJs">
         <sequence>
             <module name="Magento_Ui"/>
+            <module name="Magento_Catalog"/>
+            <module name="Magento_Checkout"/>
         </sequence>
     </module>
 </config>
