@@ -2,12 +2,9 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <head>
-        <script src="Matozan_MagentoJs/js/script-example.js" defer="true"/>
-    </head>
     <body>
         <referenceContainer name="content">
-            <block name="mage2tv-js" template="Matozan_MagentoJs::js-container.phtml"/>
+            <block name="mage2tv-js" template="Matozan_MagentoJs::requirejs/js-container.phtml"/>
         </referenceContainer>
     </body>
 </page>
