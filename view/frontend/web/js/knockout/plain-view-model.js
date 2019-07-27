@@ -4,8 +4,18 @@ define([
     'use strict';
 
     return function (config) {
+        const title = ko.observable('This is a simple view-model');
+
+        title.subscribe(function (newValue) {
+            console.log('Changed to', newValue);
+        });
+
+        title.subscribe(function (oldValue) {
+            console.log('Will be changed from', oldValue);
+        }, this, 'beforeChange');
+
         return {
-            title: ko.observable('This is a simple view-model'),
+            title: title,
             config: config
         };
     }
