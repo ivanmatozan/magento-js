@@ -5,6 +5,7 @@
     <body>
         <referenceContainer name="content">
             <block name="mage2tv-js" template="Matozan_MagentoJs::jquery/js-container.phtml"/>
+            <block name="collapsible" template="Matozan_MagentoJs::jquery/collapsible.phtml"/>
         </referenceContainer>
     </body>
 </page>
