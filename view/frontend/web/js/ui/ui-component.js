@@ -4,6 +4,9 @@ define([
     'use strict';
 
     return UiElement.extend({
-        label: 'My first uiComponent'
+        defaults: {
+            label: 'ViewModel defaults.label property' // Best practice
+        },
+        label: 'ViewModel label property'
     });
 });
