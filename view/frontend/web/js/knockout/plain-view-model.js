@@ -21,7 +21,14 @@ define([
         const viewModel = {
             title: title,
             config: config,
-            label: ko.observable('Currency Info')
+            label: ko.observable('Currency Info'),
+            exchangeRates: ko.observableArray([
+                {
+                    currencyTo: 'USD',
+                    rate: 1.0
+                }
+            ]),
+            values: ko.observableArray([1, 3, 5, 7, 9])
         };
 
         viewModel.output = ko.computed(function () {

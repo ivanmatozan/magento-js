@@ -6,6 +6,17 @@
     <pre data-bind="text: JSON.stringify(config, null, 4)"></pre>
 
     <pre data-bind="text: output"></pre>
+
+    <table data-bind="foreach: exchangeRates">
+        <tr>
+            <td data-bind="text: currencyTo"></td>
+            <td data-bind="text: rate"></td>
+        </tr>
+    </table>
+
+    <ul data-bind="foreach: values">
+        <li data-bind="text: $data"></li>
+    </ul>
 </div>
 
 <script type="text/x-magento-init">
