@@ -1,0 +1,19 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
+
+<div data-bind="scope: 'exampleUiComponent'">
+    <div data-bind="text: label"></div>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "exampleUiComponent": {
+                        "component": "Matozan_MagentoJs/js/ui/ui-component"
+                    }
+                }
+            }
+        }
+    }
+</script>
