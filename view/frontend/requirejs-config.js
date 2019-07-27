@@ -16,5 +16,14 @@ var config = {
     // Loads module on every page
     deps: [
         'Matozan_MagentoJs/js/requirejs/log-when-loaded'
-    ]
+    ],
+
+    // Load module before some other module
+    shim: {
+        'Magento_Catalog/js/view/compare-products': {
+            deps: [
+                'Matozan_MagentoJs/js/requirejs/before-compare-products'
+            ]
+        }
+    }
 };
