@@ -1,19 +1,12 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
+
 <div id="my-collapsible">
     <div data-role="title">
         <h2>How 'bout a collapsible widget? <button data-role="trigger">GO</button></h2>
     </div>
-    <div id="example" data-role="content">
-        This is the collapsible content right here!
-        This is the collapsible content right here!
-        This is the collapsible content right here!
-        This is the collapsible content right here!
-        This is the collapsible content right here!
-        This is the collapsible content right here!
-        This is the collapsible content right here!
-        This is the collapsible content right here!
-        This is the collapsible content right here!
-        This is the collapsible content right here!
-    </div>
+    <div id="example" data-role="content"></div>
+    <a href="<?= $block->getViewFileUrl('Matozan_MagentoJs/example-content.html') ?>"
+       data-ajax="true"></a>
 </div>
 
 <script type="text/x-magento-init">
@@ -25,7 +18,8 @@
                 "animate": {
                     "duration": 600,
                     "easing": "linear"
-                }
+                },
+                "ajaxContent": true
             }
         }
     }
