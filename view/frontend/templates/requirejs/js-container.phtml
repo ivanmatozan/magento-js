@@ -4,7 +4,12 @@
     {
         "*": {
             "Matozan_MagentoJs/js/requirejs/example": {},
-            "Matozan_MagentoJs/js/requirejs/example-2": {}
+
+            "Matozan_MagentoJs/js/requirejs/example-2": {},
+
+            "Matozan_MagentoJs/js/requirejs/example-3": {
+                "baseUrl": "<?= $block->escapeJs($block->getBaseUrl()) ?>"
+            }
         }
     }
 </script>
