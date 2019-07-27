@@ -4,6 +4,10 @@
     <!-- ko template: getTemplate() --><!-- /ko -->
 </div>
 
+<div data-bind="scope: 'parentComponent'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
 <script type="text/x-magento-init">
     {
         "*": {
@@ -14,6 +18,26 @@
                         "label": "JSON label property",
                         "config" : {
                             "label": "JSON config.label property"
+                        }
+                    },
+                    "parentComponent": {
+                        "component": "uiComponent",
+                        "template": "Matozan_MagentoJs/info",
+                        "children": {
+                            "child1": {
+                                "component": "uiComponent",
+                                "template": "Matozan_MagentoJs/info",
+                                "children": {
+                                    "child11": {
+                                        "component": "uiComponent",
+                                        "template": "Matozan_MagentoJs/info"
+                                    }
+                                }
+                            },
+                            "child2": {
+                                "component": "uiComponent",
+                                "template": "Matozan_MagentoJs/info"
+                            }
                         }
                     }
                 }
