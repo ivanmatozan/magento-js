@@ -25,5 +25,11 @@ var config = {
                 'Matozan_MagentoJs/js/requirejs/before-compare-products'
             ]
         }
+    },
+
+    // Rewrite modules
+    paths: {
+        // 'matozanTitle': 'Matozan_MagentoJs/js/requirejs/v1'
+        'matozanTitle': 'Matozan_MagentoJs/js/requirejs/v2'
     }
 };
