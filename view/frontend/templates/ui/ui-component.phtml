@@ -8,6 +8,10 @@
     <!-- ko template: getTemplate() --><!-- /ko -->
 </div>
 
+<div data-bind="scope: 'parent1'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
 <script type="text/x-magento-init">
     {
         "*": {
@@ -37,6 +41,23 @@
                             "child2": {
                                 "component": "uiComponent",
                                 "template": "Matozan_MagentoJs/info"
+                            }
+                        }
+
+                    },
+                    "parent1": {
+                        "component": "uiComponent",
+                        "template": "Matozan_MagentoJs/render-child",
+                        "children": {
+                            "child1": {
+                                "component": "uiComponent",
+                                "template": "Matozan_MagentoJs/info",
+                                "children": {
+                                    "child2": {
+                                        "component": "uiComponent",
+                                        "template": "Matozan_MagentoJs/info"
+                                    }
+                                }
                             }
                         }
                     }
