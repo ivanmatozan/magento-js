@@ -1,0 +1,19 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
+
+<div data-bind="scope: 'startSimple'">
+    <h2 data-bind="text: title"></h2>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "startSimple": {
+                        "component": "Matozan_MagentoJs/js/knockout/plain-view-model"
+                    }
+                }
+            }
+        }
+    }
+</script>
