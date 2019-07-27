@@ -4,7 +4,7 @@ define([
     'use strict';
 
     return function () {
-        return ko.track({
+        const viewModel = ko.track({
             label: '',
             additionalCharge: 2,
             items: [
@@ -18,5 +18,11 @@ define([
                 return sum + this.additionalCharge;
             }
         });
+
+        ko.getObservable(viewModel, 'additionalCharge').subscribe(function (newValue) {
+            console.log('Additional Charge changed to', newValue);
+        });
+
+        return viewModel;
     }
 });
