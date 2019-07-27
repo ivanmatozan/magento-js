@@ -18,10 +18,10 @@ var config = {
         'Matozan_MagentoJs/js/requirejs/log-when-loaded'
     ],
 
-    // Load module before some other module
     shim: {
         'Magento_Catalog/js/view/compare-products': {
             deps: [
+                // Load module before some other module
                 'Matozan_MagentoJs/js/requirejs/before-compare-products'
             ]
         }

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Matozan\MagentoJs\Controller\RequireJs;
+namespace Matozan\MagentoJs\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\Controller\ResultFactory;
 
-class Index extends Action
+class RequireJs extends Action
 {
     public function execute()
     {
