@@ -11,5 +11,10 @@ var config = {
                 'Matozan_MagentoJs/js/requirejs/checkout-data-mixin': true
             }
         }
-    }
+    },
+
+    // Loads module on every page
+    deps: [
+        'Matozan_MagentoJs/js/requirejs/log-when-loaded'
+    ]
 };
