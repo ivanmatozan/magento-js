@@ -1,5 +1,10 @@
 <?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
 
+<div data-bind="scope: 'statefulExample'">
+    <span>Your Input:</span>
+    <input type="text" data-bind="textInput: input" autofocus>
+</div>
+
 <div data-bind="scope: 'parent1'">
     <!-- ko foreach: getRegion('groupA') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
@@ -64,6 +69,10 @@
                     },
                     "component-b": {
                         "component": "Matozan_MagentoJs/js/frontend-ui/component-b"
+                    },
+
+                    "statefulExample": {
+                        "component": "Matozan_MagentoJs/js/frontend-ui/stateful-example"
                     }
                 }
             }
