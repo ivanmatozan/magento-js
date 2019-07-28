@@ -5,6 +5,35 @@
     <body>
         <referenceContainer name="content">
             <block name="js-container" template="Matozan_MagentoJs::frontend-ui/js-container.phtml"/>
+            <block name="xml-configuration" template="Matozan_MagentoJs::frontend-ui/xml-configuration.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="component-1" xsi:type="array">
+                                <item name="component" xsi:type="string">uiComponent</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">Matozan_MagentoJs/info</item>
+                                </item>
+                                <item name="children" xsi:type="array">
+                                    <item name="component-2" xsi:type="array">
+                                        <item name="component" xsi:type="string">uiComponent</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">Matozan_MagentoJs/info</item>
+                                        </item>
+                                        <item name="children" xsi:type="array">
+                                            <item name="component-3" xsi:type="array">
+                                                <item name="component" xsi:type="string">uiComponent</item>
+                                                <!-- Configuration doesn't need to be under config subarray-->
+                                                <item name="template" xsi:type="string">Matozan_MagentoJs/info</item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>
