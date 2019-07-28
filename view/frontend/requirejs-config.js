@@ -7,12 +7,15 @@ var config = {
 
     config: {
         mixins: {
+            // Basic mixin example
             'Magento_Checkout/js/checkout-data': {
                 'Matozan_MagentoJs/js/requirejs/checkout-data-mixin': true
             },
+            // jQuery UI Widget mixin
             'Magento_Catalog/js/catalog-add-to-cart': {
                 'Matozan_MagentoJs/js/jquery/catalog-add-to-cart-mixin': true
             },
+            // UiComponent mixin
             'Magento_Checkout/js/view/minicart': {
                 'Matozan_MagentoJs/js/frontend-ui/minicart-mixin': true
             }
