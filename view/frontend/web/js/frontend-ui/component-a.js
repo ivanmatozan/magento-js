@@ -14,7 +14,8 @@ define([
                 description: true
             },
             imports: {
-                amount: 'component-b:value', // Imports property value from component-b
+                // Used ${ $.provider } is => 'component-b'
+                amount: '${ $.provider }:value', // Imports property value from component-b
                 onValueUpdate: 'component-b:value' // Call function when component-b value property changes
             },
             exports: {
