@@ -10,6 +10,15 @@
     <!-- ko template: getTemplate() --><!-- /ko -->
 </div>
 
+<div data-bind="scope: 'component-a'">
+    <h3 data-bind="text: label"></h3>
+    <div data-bind="text: amount"></div>
+</div>
+<div data-bind="scope: 'component-b'">
+    <h3 data-bind="text: title"></h3>
+    <div data-bind="text: value"></div>
+</div>
+
 <script type="text/x-magento-init">
     {
         "*": {
@@ -40,11 +49,18 @@
                                 "displayArea": "groupA"
                             }
                         }
-
                     },
+
                     "es5Observable": {
                         "component": "Matozan_MagentoJs/js/frontend-ui/es5-observable",
                         "template": "Matozan_MagentoJs/es5-observable"
+                    },
+
+                    "component-a": {
+                        "component": "Matozan_MagentoJs/js/frontend-ui/component-a"
+                    },
+                    "component-b": {
+                        "component": "Matozan_MagentoJs/js/frontend-ui/component-b"
                     }
                 }
             }
