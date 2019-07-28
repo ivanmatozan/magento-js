@@ -8,6 +8,7 @@ define([
             title: 'Component B',
             value: 5.5,
             tracks: {
+                title: true,
                 value: true
             }
         }
