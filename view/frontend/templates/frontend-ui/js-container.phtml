@@ -26,6 +26,10 @@
     <div data-bind="text: details"></div>
 </div>
 
+<div data-bind="scope: 'root'">
+    The value is: <span data-bind="text: value"></span>
+</div>
+
 <script type="text/x-magento-init">
     {
         "*": {
@@ -73,6 +77,23 @@
 
                     "statefulExample": {
                         "component": "Matozan_MagentoJs/js/frontend-ui/stateful-example"
+                    },
+
+                    "root": {
+                        "component": "uiComponent",
+                        "value": 0,
+                        "deps": [
+                            "root.sharedState"
+                        ],
+                        "imports": {
+                            "value": "root.sharedState:value"
+                        },
+                        "children": {
+                            "sharedState": {
+                                "component": "uiComponent",
+                                "value": 42
+                            }
+                        }
                     }
                 }
             }
