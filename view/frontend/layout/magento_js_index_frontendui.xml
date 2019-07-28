@@ -4,7 +4,6 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block name="js-container" template="Matozan_MagentoJs::frontend-ui/js-container.phtml"/>
             <block name="xml-configuration" template="Matozan_MagentoJs::frontend-ui/xml-configuration.phtml">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
@@ -34,6 +33,8 @@
                     </argument>
                 </arguments>
             </block>
+            <block name="js-container" template="Matozan_MagentoJs::frontend-ui/js-container.phtml"/>
+            <block name="custom-app" template="Matozan_MagentoJs::frontend-ui/custom-app.phtml"/>
         </referenceContainer>
     </body>
 </page>

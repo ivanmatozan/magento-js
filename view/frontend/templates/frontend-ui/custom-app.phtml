@@ -1,0 +1,26 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
+
+<div data-bind="scope: 'mutator'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "mutator": {
+                        "component": "Matozan_MagentoJs/js/frontend-ui/custom-app/value-mutator",
+                        "template": "Matozan_MagentoJs/custom-app/button",
+                        "children": {
+                            "display": {
+                                "component": "Matozan_MagentoJs/js/frontend-ui/custom-app/value-display",
+                                "template": "Matozan_MagentoJs/custom-app/display"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
