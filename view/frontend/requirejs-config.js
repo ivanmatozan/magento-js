@@ -12,6 +12,9 @@ var config = {
             },
             'Magento_Catalog/js/catalog-add-to-cart': {
                 'Matozan_MagentoJs/js/jquery/catalog-add-to-cart-mixin': true
+            },
+            'Magento_Checkout/js/view/minicart': {
+                'Matozan_MagentoJs/js/frontend-ui/minicart-mixin': true
             }
         }
     },
