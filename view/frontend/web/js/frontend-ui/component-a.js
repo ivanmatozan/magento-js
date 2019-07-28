@@ -7,9 +7,11 @@ define([
         defaults: {
             label: 'Component A',
             amount: 11,
+            description: 'Lorem ipsum dolor sit amet',
             tracks: {
                 label: true,
-                amount: true
+                amount: true,
+                description: true
             },
             imports: {
                 amount: 'component-b:value', // Imports property value from component-b
@@ -17,6 +19,9 @@ define([
             },
             exports: {
                 label: 'component-b:title' // Exports property label to component-b title property
+            },
+            links: {
+                description: 'component-b:details' // Two-way binding with component-b details property
             }
         },
 

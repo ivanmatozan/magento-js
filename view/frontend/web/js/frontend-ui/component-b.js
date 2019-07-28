@@ -7,9 +7,11 @@ define([
         defaults: {
             title: 'Component B',
             value: 5.5,
+            details: 'Quisque viverra ultrices velit at aliquet',
             tracks: {
                 title: true,
-                value: true
+                value: true,
+                details: true
             }
         }
     });
