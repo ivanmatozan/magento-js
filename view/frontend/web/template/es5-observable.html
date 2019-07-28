@@ -1,0 +1,14 @@
+<table data-bind="foreach: items">
+    <tr>
+        <td data-bind="text: name"></td>
+        <td data-bind="text: qty"></td>
+        <td data-bind="text: price"></td>
+        <td data-bind="text: $parent.rowTotal($data)"></td>
+    </tr>
+</table>
+<div>
+    Additional Charge: <span data-bind="text: additionalCharge"></span>
+</div>
+<div>
+    <strong>Total: <span data-bind="text: total()"></span></strong>
+</div>

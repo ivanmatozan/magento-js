@@ -6,6 +6,10 @@
     <!-- /ko -->
 </div>
 
+<div data-bind="scope: 'es5Observable'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
 <script type="text/x-magento-init">
     {
         "*": {
@@ -37,6 +41,10 @@
                             }
                         }
 
+                    },
+                    "es5Observable": {
+                        "component": "Matozan_MagentoJs/js/frontend-ui/es5-observable",
+                        "template": "Matozan_MagentoJs/es5-observable"
                     }
                 }
             }
