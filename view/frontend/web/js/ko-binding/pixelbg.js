@@ -1,7 +1,8 @@
 define([
     'ko',
+    'Magento_Ui/js/lib/knockout/template/renderer',
     'Matozan_MagentoJs/js/plain/pixelbg'
-], function (ko, pixelBackground) {
+], function (ko, renderer, pixelBackground) {
     'use strict';
 
     const TYPE_COMMENT = 8;
@@ -60,6 +61,9 @@ define([
 
     // Make binding available for use by virtual elements
     ko.virtualElements.allowedBindings.pixelbg = true;
+
+    renderer.addNode('pixelbg');
+    renderer.addAttribute('pixelbg');
 
     return ko;
 });

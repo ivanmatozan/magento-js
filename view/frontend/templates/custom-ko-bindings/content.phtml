@@ -5,13 +5,15 @@ $imageUrl = $block->getViewFileUrl('Matozan_MagentoJs/images/daffodil-1378489-63
 ?>
 
 <div data-bind="scope: 'my-component'">
-    <h1 data-bind="pixelbg: {src: '<?= $imageUrl ?>', pixelSize: pixelSize}">
-        Whoop! Whoop! Whoop! Whoop! Whoop! Whoop! Whoop! Whoop!
+    <h1 data-bind="pixelbg: {src: imageUrl, pixelSize: pixelSize}">
+        Whop! Whop! Whop! Whop! Whop! Whop! Whop! Woop!
     </h1>
 
-    <!-- ko pixelbg: '<?= $imageUrl ?>', pixelSize: pixelSize -->
+    <!-- ko pixelbg: imageUrl, pixelSize: pixelSize -->
         Whoop! Whoop! Whoop! Whoop! Whoop! Whoop! Whoop! Whoop!
     <!-- /ko -->
+
+    <!-- ko template: 'Matozan_MagentoJs/custom-binding' --><!-- /ko -->
 </div>
 
 <script type="text/x-magento-init">
@@ -20,7 +22,8 @@ $imageUrl = $block->getViewFileUrl('Matozan_MagentoJs/images/daffodil-1378489-63
             "Magento_Ui/js/core/app": {
                 "components": {
                     "my-component": {
-                        "component": "Matozan_MagentoJs/js/plain/view-model"
+                        "component": "Matozan_MagentoJs/js/plain/view-model",
+                        "imageUrl": "<?= $imageUrl ?>"
                     }
                 }
             }
