@@ -1,0 +1,25 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+
+$imageUrl = $block->getViewFileUrl('Matozan_MagentoJs/images/daffodil-1378489-639x509.jpg');
+?>
+
+<div data-bind="scope: 'my-component'">
+    <h1 data-bind="pixelbg: {src: '<?= $imageUrl ?>', pixelSize: pixelSize}">
+        Whoop! Whoop! Whoop! Whoop! Whoop! Whoop! Whoop! Whoop!
+    </h1>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "my-component": {
+                        "component": "Matozan_MagentoJs/js/plain/view-model"
+                    }
+                }
+            }
+        }
+    }
+</script>
